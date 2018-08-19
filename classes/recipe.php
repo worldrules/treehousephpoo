@@ -7,19 +7,30 @@ class Recipe
     public $instructions = array();
     public $yield;
     public $tag = array();
-
     public $source = "Leonardo Carvalho";
 
+    public function setTitle($title) {
+
+        $this->title = ucwords($title);
+
+    }
+    
+    public function displayRecipe() {
+
+        echo $this->title . "by " . $this->source;
+
+    }
+    
  
 } 
 
 $recipe1 = new Recipe();
 
-echo $recipe1->source;
+// $recipe1->displayRecipe();
 
-$recipe1->source = "Agora sou The Fuck God";
+$recipe1->setTitle("my first recipe");
 
-echo $recipe1->source;
+echo $recipe1->title;
 
 
 
