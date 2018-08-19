@@ -3,7 +3,7 @@
 class Recipe
 {
     private $title;
-    private $ingredients = array();
+    public $ingredients = array();
     private $instructions = array();
     private $yield;
     private $tag = array();
@@ -68,14 +68,12 @@ class Recipe
         $this->source = ucwords($source);
     }
 
-    public function getSource($source) {
+    public function getSource() {
 
         return $this->source;
     }
 
 
-
-    
 
     public function addIngredient($item, $amount = null, $measure = null){
 
@@ -94,14 +92,6 @@ class Recipe
 
     }
 
-
-
-    public function displayRecipe() {
-
-        echo $this->title . "by " . $this->source;
-
-    }
-    
     public function getIngredients() {
 
         return $this->ingredients; 
